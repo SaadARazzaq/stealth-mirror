@@ -1,6 +1,6 @@
 # Stealth Mirror
 
-<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/080390f6-e5b5-4ad5-95c6-82f99022d17a" />
+<img width="1376" height="768" alt="image" src="assets/stealth-mirror-banner.png" />
 
 ## 🕵️ An Event Driven Invisible, Anonymous Repository Mirror for Agencies
 
@@ -50,11 +50,11 @@ The whole process takes seconds, uses only free services, and leaves **no trace 
 
 - Navigate to the link https://github.com/YOUR_ORG_NAME/YOUR_SOURCE_REPO/settings/access
 - Give **Write** access to the developer. `(This is recommended for contributors who actively contribute to your code.)`
-<img width="1199" height="643" alt="image" src="https://github.com/user-attachments/assets/18a0b05e-c493-452d-b1b5-4f34ad2eba7d" />
+<img width="1199" height="643" alt="image" src="assets/developer-permissions.png" />
 
 - ⬇ If you are adding a member to the repo, choose `write` role here.
 
-<img width="528" height="454" alt="image" src="https://github.com/user-attachments/assets/712528e7-4724-4b1d-bbe9-1859571f90dc" />
+<img width="528" height="454" alt="image" src="assets/member-role-write.png" />
 
 ### 2. Create the Required Personal Access Tokens (PATs)
 
@@ -62,9 +62,9 @@ The whole process takes seconds, uses only free services, and leaves **no trace 
 
 ##### 👉 Organizational Personal Access Token Srttings
 
-<img width="826" height="761" alt="image" src="https://github.com/user-attachments/assets/044ebb90-ecdb-409b-a509-8b445acdc608" />
+<img width="826" height="761" alt="image" src="assets/org-pat-settings-1.png" />
 
-<img width="1122" height="705" alt="image" src="https://github.com/user-attachments/assets/841f346f-9e86-411a-abb6-8ada97f4aed1" />
+<img width="1122" height="705" alt="image" src="assets/org-pat-settings-2.png" />
 
 You’ll need **two** Fine-grained PATs. 
 1. SOURCE_REPO_PAT -> This Access token is of the `YOUR_ORG_NAME/YOUR_SOURCE_REPO`, the source repo (developer added repo) from which you want to mirror into your personal private repo (client added repo).
@@ -77,9 +77,9 @@ Generate all these 3 tokens from your **personal GitHub account** (the one that 
 
 Go to **Settings → Developer settings → Personal access tokens**. Or you can go to this link https://github.com/settings/personal-access-tokens
 
-<img width="1585" height="359" alt="image" src="https://github.com/user-attachments/assets/db45224b-7a8f-41d2-a7c7-19c3c49bfb11" />
+<img width="1585" height="359" alt="image" src="assets/pat-tokens-main.png" />
 
-<img width="1585" height="507" alt="image" src="https://github.com/user-attachments/assets/61defa81-00a0-4568-899a-b26ac7e7c1c2" />
+<img width="1585" height="507" alt="image" src="assets/pat-tokens-types.png" />
 
 #### 🔑 Token A – `SOURCE_REPO_PAT`  
 - **Purpose:** Read access to the organization’s source repository.  
@@ -89,13 +89,13 @@ Go to **Settings → Developer settings → Personal access tokens**. Or you can
 - **Special:** If your organization enforces SAML SSO, after creation click **Configure SSO** and authorize this token for the organization.
 - **How to generate:**
 
-<img width="1008" height="357" alt="image" src="https://github.com/user-attachments/assets/faa57b19-8bd8-42b1-b3fb-f0f7513d66ac" />
+<img width="1008" height="357" alt="image" src="assets/token-a-new-fine-grained.png" />
 
-<img width="427" height="534" alt="image" src="https://github.com/user-attachments/assets/535d4c4f-38fc-4b3e-9536-47fab1a779df" />
+<img width="427" height="534" alt="image" src="assets/token-a-repo-select.png" />
 
-<img width="576" height="357" alt="image" src="https://github.com/user-attachments/assets/22a337e6-9e7e-4378-a1cb-ed9870531275" />
+<img width="576" height="357" alt="image" src="assets/token-a-permissions.png" />
 
-<img width="786" height="170" alt="image" src="https://github.com/user-attachments/assets/e517d1ae-f840-4577-8920-93456795b420" />
+<img width="786" height="170" alt="image" src="assets/token-a-copy.png" />
 
 **Copy and Save this Token Securely on your device**
 
@@ -106,13 +106,13 @@ Go to **Settings → Developer settings → Personal access tokens**. Or you can
 - **Where to store:** As an **environment variable** in the Cloudflare Worker (Step 2).
 - **How to generate:**
 
-<img width="1008" height="357" alt="image" src="https://github.com/user-attachments/assets/faa57b19-8bd8-42b1-b3fb-f0f7513d66ac" />
+<img width="1008" height="357" alt="image" src="assets/token-a-new-fine-grained.png" />
 
-<img width="441" height="532" alt="image" src="https://github.com/user-attachments/assets/835b372d-4ffa-4688-a336-2e714df08c28" />
+<img width="441" height="532" alt="image" src="assets/token-b-repo-select.png" />
 
-<img width="587" height="361" alt="image" src="https://github.com/user-attachments/assets/5587d1ea-5630-4c3f-b6f9-a2c62379ec50" />
+<img width="587" height="361" alt="image" src="assets/token-b-permissions.png" />
 
-<img width="790" height="180" alt="image" src="https://github.com/user-attachments/assets/1f71b900-a59a-4f95-861e-b9bce3087522" />
+<img width="790" height="180" alt="image" src="assets/token-b-copy.png" />
 
 **Copy and Save this Token Securely on your device**
 
@@ -123,13 +123,13 @@ Go to **Settings → Developer settings → Personal access tokens**. Or you can
 - **Where to store:** As a **secret** in the target repository (Step 4).
 - **How to generate:**
 
-<img width="1447" height="358" alt="image" src="https://github.com/user-attachments/assets/4d11d5a6-f40e-4a02-bcf9-7b069e7ed36c" />
+<img width="1447" height="358" alt="image" src="assets/token-c-classic-new.png" />
 
-<img width="828" height="269" alt="image" src="https://github.com/user-attachments/assets/fa23cc21-112f-43bd-a175-f4a09d5b3856" />
+<img width="828" height="269" alt="image" src="assets/token-c-scopes.png" />
 
-<img width="525" height="385" alt="image" src="https://github.com/user-attachments/assets/f4d4a6f7-e234-4a6f-9ea3-2ff407b6ccd1" />
+<img width="525" height="385" alt="image" src="assets/token-c-generate.png" />
 
-<img width="637" height="73" alt="image" src="https://github.com/user-attachments/assets/79c0b7b9-95f0-4a7f-ae21-3f737189884a" />
+<img width="637" height="73" alt="image" src="assets/token-c-copy.png" />
 
 **Copy and Save this Token Securely on your device**
 
@@ -148,9 +148,9 @@ The worker acts as an invisible bridge between the webhook and your target repo.
    - **Name:** `GITHUB_DISPATCH_TOKEN`  
    - **Value:** The **DISPATCH_PAT** (Token B) you generated earlier.
 
-<img width="1442" height="213" alt="image" src="https://github.com/user-attachments/assets/1adf493c-9fd9-4c28-aa9f-79939837e4ac" />
+<img width="1442" height="213" alt="image" src="assets/cloudflare-variables.png" />
 
-<img width="1440" height="925" alt="image" src="https://github.com/user-attachments/assets/511abbbe-a6b5-4235-867e-1981acb418f0" />
+<img width="1440" height="925" alt="image" src="assets/cloudflare-worker-code.png" />
 
 5. Deploy the Worker. Note the worker URL (e.g., `https://mirror-bridge.your-subdomain.workers.dev`).
 
