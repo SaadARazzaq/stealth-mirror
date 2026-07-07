@@ -1,6 +1,6 @@
 # Stealth Mirror
 
-<img width="1376" height="768" alt="image" src="assets/stealth-mirror-banner.png" />
+<img width="519" height="385" alt="image" src="https://github.com/user-attachments/assets/e536f96a-b488-4aa3-b294-598e6c538b53" />
 
 ## 🕵️ An Event Driven Invisible, Anonymous Repository Mirror for Agencies
 
